@@ -89,3 +89,13 @@ REFERENCES:
 https://en.wikipedia.org/wiki/Outline_of_machine_learning#Machine_learning_algorithms
 https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
 https://en.wikipedia.org/wiki/Category:Machine_learning_algorithms
+
+IMBALANCED HYPOTHESIS RULES AND GUIDANCE:
+https://www.tandfonline.com/doi/full/10.1080/01431161.2018.1433343
+https://machinelearningmastery.com/xgboost-for-imbalanced-classification/
+https://machinelearningmastery.com/imbalanced-classification-with-python-7-day-mini-course/
+https://machinelearningmastery.com/imbalanced-classification-with-python/#packages
+ - stratified sampling
+ - under/over sampling 
+ - produce synthetic minority class of feature space 
+ - implement cost-sensitive, whereas cost of misclassifying is set higher for minority compare to majority's cost of misclassifying

@@ -1,0 +1,85 @@
+Need to check this for all projects applying this or not:
+Also make each process in ML, whether applying it like this or not
+
+Feature Engineering Techniques 
+
+What are not Feature engineering:
+- removing duplicates, handling missing values, or fixing mislabeled classes. It's data cleaning
+- scaling or normalization
+- Feature selection
+
+Cyle of Feature Engineering:
+Dataset - Hypothesis test - validate hypothesis test - Apply Hypothesis
+
+1. Target Transformation
+   Predictor var transformation - Use it when variable shows a skewed distribution make the residual 
+
+more clsoe to "Normal distribution"
+     Can improve model fit - log(x), log(x+1), sqrt(x), sqrt(x+1), etc.
+
+2. Feature Encoding
+   Label Encoding - interpret the cat as ordered integers(mostly wrong), ok for tree-based methods
+   One Hot Encoding - Transform cat to individual binary (0 or 1), Ok for Linear, NNs,etc.
+   Frequency encoding - encoding of cat levels of feature to values b/w 0 and 1 based on their relative 
+
+   freq  A - 0.44 (4 out of 9)
+         B - 0.33 (3 out of 9)
+         C - 0.22 (2 out of 9)
+   Target mean Encoding - instead of dummy encoding of categorical variables and increasing the number 
+
+of features we can encode each level as the mean of the response. Comparing with Feature to outcome.
+   A - 0.75 (3 out of 4)  -- cat prob
+   B - 0.66 (2 out of 3)
+   C - 1.00 (2 out of 2)
+   Use Target Mean Encoding (Smoothing) technique (bayesian Smoothing)
+   (lambda*cat prob) + ((1.00 - cat prob)*dataset prob) = answer ----
+    dataset prob (no of positive outcome(3+2+2) / total obs(9))
+    lambda follow this formula = 1/1-exp^(x-k/f) - k=2;f=0.25 (this proces also cause leakgae in 
+
+XGBoost)
+    leave one-out-schema (Target Mean encoding) - To avoid overfitting.
+
+3. Weight of evidence
+   WOE = ln(no of non-events in a group +0.5 / no of non-events)
+           -----------------------------------------------------
+           (no of events in a group + 0.5 / no of events)  
+   IV - use to feature importance / helps imp of cat vars to use
+        less than 0.02 - not use for prediction
+        0.02 to 0.1    - Weak prediction 
+        0.1 to 0.3     - Medium predictive power
+        0.3 to 0.5     - Strong predictive power
+        >0.5           - Suspicious predictive power
+
+   Even for numerical features WOE can be used by binning using quantiles and use that bin as catg
+   Use histogram (bins of same size) and understand bins
+   
+   Good support for dimensionality reduction
+
+Feature Interaction
+  - clustering / KNN for numerical features
+  - Target encoding for pairs of cat features
+  - Encode cat features by stats of numerical features
+  - Domain knowledge
+
+Feature Extraction
+ - there usually have some meaningful features inside existing features, you need to extract them 
+
+manually
+  eg(Locations/Time(year,mon,weekday,weekend)/Number(turn age to ranges - ordinal or categorical)
+ - textual data for NLP/DL 
+
+Notes:
+No hypothesis of best encoding technqiue, need to check using all technique and apply to model, test 
+
+the evaluation metrics to understand the best.
+              
+Unstructed data (like images, video) can automate the features formation, but structured data feature 
+
+engineering automation will not be efficient. Because, images/text we have set of rule to bring to 
+
+structured features.
+
+Find these values and apply like lookup table values in python to automate.
+
+Slide:
+https://www.slideshare.net/0xdata/feature-engineering-83511751

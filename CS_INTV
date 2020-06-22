@@ -98,4 +98,75 @@ Supportive docs for credit scoring model evaluation metrics:
 https://towardsdatascience.com/using-the-gini-coefficient-to-evaluate-the-performance-of-credit-score-models-59fe13ef420
 
 
+Bagged ensemble models have both advantages and disadvantages. The advantages of random forests 
+
+include:
+The predictive performance can compete with the best supervised learning algorithms
+They provide a reliable feature importance estimate
+They offer efficient estimates of the test error without incurring the cost of repeated model training 
+
+associated with cross-validation
+
+On the other hand, random forests also have a few disadvantages:
+An ensemble model is inherently less interpretable than an individual decision tree
+Training a large number of deep trees can have high computational costs (but can be parallelized) and 
+
+use a lot of memory
+Predictions are slower, which may create challenges for applications.
+
+
+XGBoost is an efficient and easy to use algorithm which delivers high performance and accuracy as 
+
+compared to other algorithms. XGBoost is also known as regularized version of GBM. Let see some of the 
+
+advantages of XGBoost algorithm:
+
+1. Regularization: XGBoost has in-built L1 (Lasso Regression) and L2 (Ridge Regression) regularization 
+
+which prevents the model from overfitting. That is why, XGBoost is also called regularized form of GBM 
+
+(Gradient Boosting Machine).
+
+While using Scikit Learn libarary, we pass two hyper-parameters (alpha and lambda) to XGBoost related 
+
+to regularization. alpha is used for L1 regularization and lambda is used for L2 regularization.
+
+2. Parallel Processing: XGBoost utilizes the power of parallel processing and that is why it is much 
+
+faster than GBM. It uses multiple CPU cores to execute the model.
+
+While using Scikit Learn libarary, nthread hyper-parameter is used for parallel processing. nthread 
+
+represents number of CPU cores to be used. If you want to use all the available cores, don't mention 
+
+any value for nthread and the algorithm will detect automatically.
+
+3. Handling Missing Values: XGBoost has an in-built capability to handle missing values. When XGBoost 
+
+encounters a missing value at a node, it tries both the left and right hand split and learns the way 
+
+leading to higher loss for each node. It then does the same when working on the testing data.
+
+4. Cross Validation: XGBoost allows user to run a cross-validation at each iteration of the boosting 
+
+process and thus it is easy to get the exact optimum number of boosting iterations in a single run. 
+
+This is unlike GBM where we have to run a grid-search and only a limited values can be tested.
+
+5. Effective Tree Pruning: A GBM would stop splitting a node when it encounters a negative loss in the 
+
+split. Thus it is more of a greedy algorithm. XGBoost on the other hand make splits upto the max_depth 
+
+specified and then start pruning the tree backwards and remove splits beyond which there is no positive 
+
+gain.
+
+For example: There may be a situation where split of negative loss say -4 may be followed by a split of 
+
+positive loss +13. GBM would stop as it encounters -4. But XGBoost will go deeper and it will see a 
+
+combined effect of +9 of the split and keep both.
+
+
+HDF5 to save model and load weights together, high computational in performing multiple matrix arrays.
 

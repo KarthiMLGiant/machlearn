@@ -1,0 +1,101 @@
+specialized Data Scientist in Banking/Finance/Telco
+Experienced in Python/SAS, SQl(Teradata/SAS/Hive), Visualization(Powerpoint and Tableau) and Cloud Specialization (AWS/GCP)
+Learn about credit scoring model using python/revise prediction model end-to-end process/resume projects/JD
+
+Self Intro
+
+About Projects:
+I have created supportive analysis and prediction for Credit scoring like (Consumer/SME)
+Product Analytics on consumer/sme using machine learning algorithms ---
+Risk customers for MG for MIA specifically post COVID to target the base, 
+Clustering on HP customer base High/Medium/Low Affluent base using Used/New/Recon car types and determined the settlement period diff among other clusters.
+early settlement customers for HP
+Attrition customers in Credit Card 
+Cluster Analysis using FD Segmentation 
+SME propensity scoring for cross BCL/PL to existing loan takers and <2years SME base since these base doesn't opt for any other loan products
+SME Clustering for identifying the High/Medium/Low Affluent in Partnership,Sole_prop,SDN BHD.
+In addition to this used polynomial regression model to identify the target age of each industry by constitutions.
+
+Model selection:
+When you evaluate which model type
+is best suited for achieving your goals, you may want to consider criteria such as the
+ease of applying the model, the ease of understanding it and the ease of justifying it.
+
+Use case: Next Best Product Analytics using Machine learning algorithm 
+Good customers who just got a credit facility:
+Newly approved for a car loan and is GOOD according to risk management. His/Her next step is to purchase a house.
+This use case helps to identify the next best offers for customers.
+
+About Credit Scoring:
+Credit score are calculate from Data rich credit report
+It is used by Financial institutions, telco, insurance and SME to find consumer credit worthiness with right prod offering in relation of risk.
+Higher the score, lower the risk.
+https://www.clearpointstrategy.com/full-exhaustive-balanced-scorecard-example/
+
+To read and make notes here:
+BASEL/IFRS9
+To identify the income estimation model 
+Read about Data rich credit report
+Gini coefficient, Confusion matrix(Type I/II errors), KS-statistics, ROC Curve, precision/recall ---in business use case
+Knowledge on building Credit scoring model in telco/banking (know about vars used, technique handle, metrics)
+Understanding the Multicollinearity/Correlation matrix 
+Debt to income ratio (debt repayment/monthly gross income)
+Customer lifetime value 
+FICO Score 9 -  traditional credit report vars 
+Deep learning applications using in Credit scoring 
+resume projects strong
+python glance the basics
+
+Debt to income ratio:
+- (debt repayment/monthly gross income)
+
+Customer lifetime value:
+- It’s an important metric as it costs less to keep existing customers than it does to acquire new ones, 
+  so increasing the value of your existing customers is a great way to drive growth.
+- attrition helps to retain existing one, CLV helps to acquire new cust as well as retain existing customers.
+- Historic CLV and predictive CLV 
+- Historic CLV (Customer revenue per year * Duration of the relationship in years -
+				Total costs of acquiring and serving the customer)
+-  predictive CLV (This is an algorithmic process that takes historical data and 
+   uses it to make a smart prediction of how long a customer relationship is likely to last and what its value will be.)
+   check the features and model for this ---
+- Traditional CLV formula
+
+Evaluation metrics in Credit scoring:
+Divergence 		 - measures a score's ability to separate future goods from bads.
+Gini coefficient: (indicates model discriminatory)
+- The Gini coefficient which is used in the financial industry to evaluate the quality of a credit score model
+- Extract the Gini coefficient from the CAP curve.
+- Summary statistics of the trade-off curve 
+- effectiveness of model in differentiating b/w 'bad' borrowers who will default in future, 'good' borrowers who don't default in future.
+- use this metrics to check 
+- the Gini coefficient is a ratio that represents how close our model to be a “perfect model” and how far it is from being a “random model.” 
+- The model predicted a default and the borrower defaulted 		 — True Positive.
+- The model predicted a default and the borrower didn’t default  — False Positive.
+- The model predicted no default and the borrower didn’t default — True Negative.
+- The model predicted no default and the borrower defaulted 	 — False Negative
+- Gini = 2*AUC-1 
+- Gini lift, incremental in Gini Coefficient by score segment on improving the existing model
+
+Somers’ D, which is the summary of the CAP (Cumulative Accuracy Profile) curve:
+- measure of the ordinal relationship between two variables
+- credit score models, it measures the ordinal relationship between the models’ predictions, in terms of PD (Probability of Default)
+
+
+Client Scorecard:
+- Client scoring is a way to develop a consistent client scorecard (or client report card) for every client that a business serves.  
+
+Purpose of scorecard:
+Identifying best customers, and providing them with a higher level of service
+Identifying worst customers and, in some cases, discontinuing service to them
+Finding past customers who have a great score but are now inactive, and re-activating them
+Identifying prospects that are similar to your top customers for acquisition efforts
+Identifying lost high value customers, and determining why you lost them and how you can improve your performance
+
+
+
+Supportive docs for credit scoring model evaluation metrics:
+https://towardsdatascience.com/using-the-gini-coefficient-to-evaluate-the-performance-of-credit-score-models-59fe13ef420
+
+
+

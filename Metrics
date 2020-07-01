@@ -20,7 +20,7 @@ KS Stats  - Kolmogorov-Smirnov chart
             label of observations. 
             K-S Statistic=0 indicates a very poor model which fails to successfully distinguish between the classes.
 
-            In our example, as our target is default then KS statistic will be the difference between the Cumulative default and Cumulative Non-defaulters observations. 
+            In our example, as our target is default then KS statistic will be the difference between the Cumulative default and Cumulative Non-defaulters             observations. 
             Higher K-S value means that the model is good at separating the two classes.
             For a good model, the maximum K-S statistic should fall in the top three or four deciles as we expect the maximum differentiation 
             between the churners and non-churners to happen in the initial deciles only.
@@ -32,18 +32,18 @@ Gini Score- Area between the random and model line tells us the additional lift 
             Gini Coefficient tells us about the differentiating power of the model. (between the random and model) 
             In a ROC Curve, it is the area between the random model and the created model (ROC Curve).
 
-Precision - REFER BELOW
+Precision - TP/TP+FP
 
-Recall    - REFER BELOW
+Recall    - TP/TP+FN
 
-CM        - REFER BELOW
+CM        - confusion matrix that evaluates models on the whole population
 
 Type I  Error - False Positive
 Type II Error - False Negative
 
 Anamoly detection 
 
-One class SVM
+One class SVM - OK
 
 Advantage of Logistic in WoE
 

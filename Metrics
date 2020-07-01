@@ -1,0 +1,56 @@
+AUC score - Area Under Curve Gives the performance of the model. Good model represents to be 1, which means accuracy is 100%, 
+            TPR/FPR are 100% prediction by model. Whereas 50% represents bad model, predicts outcome in random probability.
+            Hence, business terms to understand the overall performance of model need to verify the better AUC score as threshold.
+
+ROC Curve - TPR vs FPR at every probability setting. 
+
+Gain/lift - It's a measure of the effectiveness of a classification model calculated as the ratio between the results obtained with and without the model.
+            confusion matrix that evaluates models on the whole population
+            whereas gain or lift chart evaluates model performance in a portion of the population. 
+            eg: different credit scores in a predicted outcome, select a portion of the population and determines 10% to 100% counts and 
+                respective target%. Same Lift gives the uplift of using model between without the model result.
+                when we target first 10% population, target population will be 36% so expected lift by using model will be 3.6
+                same we target 100% population, target population will be 100% so expected (response rate) lift by using model will be 1 
+                for that overall popualtion.
+
+KS Stats  - Kolmogorov-Smirnov chart  
+            K-S is a measure of the degree of separation between the positive and negative distributions.
+            It measures the discriminatory power of a model, checks whether the model is able to distinguish between events and non-events
+            K-S statistic=100 will mean that the model is able to create two mutually exclusive groups with each group having a separate class 
+            label of observations. 
+            K-S Statistic=0 indicates a very poor model which fails to successfully distinguish between the classes.
+
+            In our example, as our target is default then KS statistic will be the difference between the Cumulative default and Cumulative Non-defaulters observations. 
+            Higher K-S value means that the model is good at separating the two classes.
+            For a good model, the maximum K-S statistic should fall in the top three or four deciles as we expect the maximum differentiation 
+            between the churners and non-churners to happen in the initial deciles only.
+            both the classes that much measure is able to obtain.
+           
+        
+Gini Score- Area between the random and model line tells us the additional lift that the model is able to get than the traditional. (responder rate)
+            Gini coefficient = 2 × AUC-1
+            Gini Coefficient tells us about the differentiating power of the model. (between the random and model) 
+            In a ROC Curve, it is the area between the random model and the created model (ROC Curve).
+
+Precision - REFER BELOW
+
+Recall    - REFER BELOW
+
+CM        - REFER BELOW
+
+Type I  Error - False Positive
+Type II Error - False Negative
+
+Anamoly detection 
+
+One class SVM
+
+Advantage of Logistic in WoE
+
+Disadvantage of Logistic in imbalanced dataset 
+
+why using knn for missing value handling and frequency for filling missing values
+
+https://www.datavedas.com/model-evaluation-classification-models/
+https://towardsdatascience.com/how-to-determine-the-best-model-6b9c584d0db4
+saedsayad.com/model_evaluation_c.htm

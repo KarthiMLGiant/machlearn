@@ -20,7 +20,7 @@ KS Stats  - Kolmogorov-Smirnov chart
             label of observations. 
             K-S Statistic=0 indicates a very poor model which fails to successfully distinguish between the classes.
 
-            In our example, as our target is default then KS statistic will be the difference between the Cumulative default and Cumulative Non-defaulters             observations. 
+            In our example, as our target is default then KS statistic will be the difference between the Cumulative default and Cumulative Non-defaulters observations. 
             Higher K-S value means that the model is good at separating the two classes.
             For a good model, the maximum K-S statistic should fall in the top three or four deciles as we expect the maximum differentiation 
             between the churners and non-churners to happen in the initial deciles only.
@@ -45,12 +45,59 @@ Anamoly detection
 
 One class SVM - OK
 
-Advantage of Logistic in WoE
+
 
 Disadvantage of Logistic in imbalanced dataset 
-
-why using knn for missing value handling and frequency for filling missing values
 
 https://www.datavedas.com/model-evaluation-classification-models/
 https://towardsdatascience.com/how-to-determine-the-best-model-6b9c584d0db4
 saedsayad.com/model_evaluation_c.htm
+https://towardsdatascience.com/the-use-of-knn-for-missing-values-cf33d935c637
+http://ucanalytics.com/blogs/reject-inference-scorecards-banking-case-part-5/
+https://www.analyticsvidhya.com/blog/2017/03/imbalanced-data-classification/
+
+Flow to follow:
+
+cm                  - confusion matrix that evaluates models on the whole population
+model evaluation cm - defaulter vs non defaulters
+accuracy 	    - 
+recall              - TP/TP+FN
+AUC                 - (performance of model) - 
+Gini                - (explains the model response outcome, between random and model tell us additional lift of using the model than get using traditional) 
+Gain/Lift           - gives the same, but it does on selected population
+KS Stats            - measure of the degree of separation between the positive and negative distributions.
+		      measures the discriminatory power of a model, checks whether the model is able to distinguish between events and non-events
+
+Anamoly detection       - 
+KNN for missing values  - KNN is an algorithm that is useful for matching a point with its closest k neighbors in a multi-dimensional space. 
+                          It can be used for data that are continuous, discrete, ordinal and categorical which makes 
+                          it particularly useful for dealing with all kind of missing data.
+Freq for missing values - 
+
+
+WoE in Logistic Regression - In these models it is common to use weight of evidence (WOE) coding of a nominal, ordinal, or discrete1
+                             variable when preparing predictors for use in a logistic model. 
+                             Weight of Evidence (WoE) is powerful technique to perform variable transformation & selection . 
+                             It is widely used In credit scoring to measure the separation of good vs bad customers.(variables). 
+                             Advantages :: - Handles missing values Handles outliers the transformation is based on logrithmic value of distribution. 
+                             No need for dummy variables by using proper binning technique it can establish monotonic relationship btw the independent & dependent.
+
+improvise model using:
+- behavioral data stating trend analysis (ENR, SPEND, Txn CNT latest 6 months, repayment behavior using CASA trxn),whereas holding other products
+- Power models for better performance especially when imbalanced sets available
+- parameter optimization in the selected model 
+
+
+
+Bagging is used for reducing Overfitting in order to create strong learners for generating accurate predictions.
+
+Boosting is an ensemble technique to combine weak learners to create a strong learner that can make accurate predictions. 
+Boosting starts out with a base classifier / weak classifier that is prepared on the training data.
+In the next iteration, the new classifier focuses on or places more weight to those cases which were incorrectly classified in the last round.
+
+Ada Boost is the first original boosting technique which creates a highly accurate prediction rule by combining many weak and inaccurate rules.  
+Each classifier is serially trained with the goal of correctly classifying examples in every round that were incorrectly classified in the previous round.
+
+https://towardsdatascience.com/how-to-use-machine-learning-for-anomaly-detection-and-condition-monitoring-6742f82900d7
+Use PCA for reduction of many variables and making the multivariate stat analysis (Anomaly detection) using probability with Gaussian distribution (Standard
+deviation) and set that prob for future prediction. If falls under that will be counted as anomaly data points.

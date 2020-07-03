@@ -1,0 +1,46 @@
+- model development 
+- learn about each model 
+   - working
+   - parameters
+   - optimal for type of data
+- for risk based modelling most optimal algorithms and its
+   - working
+   - parameters
+   - optimal for type of data
+- All evaluation metrics 
+- moving avg and weighted avg 
+- python coding knowledge 
+- Deep Learning (ANN) model and it's cost sensitive functions for each cases
+- Explaining Machine learning models to business executives
+- good ml model accuracy 
+- how model determines the feature importance and difference to significance test/feature imp by model.
+- good range to split the data ? things to consider for splitting 
+- see all classifier model available features 
+- read about all models done in my resume and relate to use in RISK MODEL
+
+Explain about Model Development:
+Using the model output using information value given by models 
+In order to improve the performance of the model, requires to evaluate the measure of observables
+Using, Precision/recall highly recommended in imbalanced problems
+To fix the developed model, then it comes rest of other statistical validation measures to determine the power of the model.
+
+should be clear with goal and depends on that evaluation protocols will be set:
+ Maintaining a Hold Out Validation Set
+ - The process would be to train the model with the remaining fraction of the data, 
+   tunning its parameters with the validation set and finally evaluating its performance on the test set.
+   The reason to split data in three parts is to avoid information leaks. One inconvenient of this method is if little data 
+   available few samples that the tuning and evaluation processes of the model will not be effective.   
+
+   
+   
+Decisiontree
+- n_tree = sqrt(no of rows/no of columns)/noofcpu
+- Using condition/internal node, based on which tree split into branches/edges. End of branch doesn't split anymore is decision/leaf. (1 or 0)
+- 
+
+https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052
+https://towardsdatascience.com/boosting-the-accuracy-of-your-machine-learning-models-f878d6a2d185
+https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#remarks
+https://infocenter.informationbuilders.com/wf80/index.jsp?topic=%2Fpubdocs%2FRStat16%2Fsource%2Ftopic47.htm
+https://machinelearningmastery.com/data-leakage-machine-learning/
+https://github.com/iamtodor/data-science-interview-questions-and-answers#24-difference-between-AdaBoost-and-XGBoost
